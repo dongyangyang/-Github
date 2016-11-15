@@ -1,0 +1,53 @@
+1、到GitHub上注册自己的账号。https://github.com/
+2、创建第一个代码仓库。
+填写代码仓库的名字，我的第一个代码仓库的名字：HelloWorld（第一个想到的就是HelloWorld，程序员不解释）；
+
+选择public，public权限表示所有人都能够查看这些代码并下载。
+
+ private权限是要收费的，表示只有指定用户才能查看并下载这些代码。
+
+然后点击Create repository，代码仓库创建成功。
+
+3、下载并安装GitHub客户端（我的windows下的客户端），地址：http://msysgit.github.io/，
+选择对应自己电脑的版本。然后就是安装客户端了，不做过多的介绍了。
+
+4、在自己电脑的本地创建一个文件夹用来保存项目文件。
+在这个目录下右击，就会出现Git Bash选项，点击进入。
+
+5、设置用户名和邮箱地址。这两个值是作为上传时记录的值。输入命令：
+
+git config --global user.name "用户名"
+
+git config --global user.email "邮箱"
+
+查看目前设置可以用：git config --global user.name
+
+6、初始化本地仓库：git init
+
+此目录下会创建一个.git的文件（此文件可能会隐藏，笔者是windows8.1系统，该文件就隐藏，还以为没有生成）
+
+7、将原有的项目文件放在该目录下，然后将该项目纳入.git版本控制中
+
+git add . (一定要注意add和.之间是有空格的，否则会报错的)
+
+8、将所有更改放到本地暂存区域，等待上传。
+git commit -m "此次上传的说明"（对自己的项目做一些说明）
+
+9、连接远程仓库
+
+git remote add origin "https://github.com/GitHub用户名/代码仓库名称.git"
+
+可以通过git remote -v 查看本地链接到的远程仓库
+
+10、从远程仓库拉取所有更新（每次上传项目都要操作）
+
+git pull origin master
+
+11、将本地的更新上传至代码仓库
+
+git push origin master
+需要输入自己的用户名和密码
+
+12、等待一会，等上传完毕，你就可以在自己的GitHub主页上看见自己的项目了，由于是选择的public权限，
+其他人也可以查看、下载你的源代码。
+
